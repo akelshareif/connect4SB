@@ -1,0 +1,300 @@
+/* reset */
+body,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* game start */
+body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: -o-linear-gradient(28deg, #fbab7e 0%, #f7ce68 100%);
+    background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+}
+
+h1 {
+    text-align: center;
+}
+
+#currentPlayerDisplay {
+    display: none;
+    margin: 5px;
+    font-size: 1.5rem;
+}
+.playerPiece {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+#currPlayerText {
+    font-size: 2.25rem;
+}
+
+.winReset {
+    display: none;
+}
+
+#header {
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-family: optima, sans-serif;
+    text-align: center;
+    color: rgb(255, 92, 92);
+    -webkit-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+    transition: margin-top 1s;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+button {
+    width: 280px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.363);
+    border-style: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 92, 92);
+}
+
+/* game board table */
+#board {
+    width: 700px;
+    height: 700px;
+    opacity: 0;
+    margin: 10px auto;
+    border-radius: 5px;
+    border-collapse: collapse;
+    -webkit-transition: opacity ease-in 1s;
+    -o-transition: opacity ease-in 1s;
+    transition: opacity ease-in 1s;
+    background-color: #ffffff3b;
+}
+
+#board td {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    -webkit-box-shadow: inset 0px 0px 0px 6px rgba(0, 0, 0, 0.575);
+    box-shadow: inset 0px 0px 0px 6px rgba(0, 0, 0, 0.575);
+    border-radius: 50%;
+}
+
+.gameRows {
+    position: relative;
+    z-index: 1;
+}
+
+.piece {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-animation: fall 0.5s ease;
+    animation: fall 0.5s ease;
+}
+
+.p1 {
+    background-color: red;
+}
+
+.p2 {
+    background-color: blue;
+}
+
+/* column-top is table row of clickable areas for each column */
+#column-top td {
+    border: dashed 4px rgb(255, 255, 255);
+    text-align: center;
+}
+
+#column-top td:hover {
+    background-color: gold;
+}
+
+@-webkit-keyframes fall {
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fall {
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 600px) {
+    #header {
+        margin-top: 20%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    button {
+        width: 140px;
+        font-size: 1.5rem;
+    }
+
+    #currPlayerText {
+        font-size: 1.75rem;
+    }
+
+    #board {
+        width: 95%;
+        height: 95%;
+    }
+
+    #board td {
+        -webkit-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
+        box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
+    }
+
+    @-webkit-keyframes fall {
+        0% {
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes fall {
+        0% {
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 850px) {
+    #header {
+        margin-top: 10%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    #currPlayerText {
+        font-size: 2rem;
+    }
+
+    button {
+        width: 140px;
+        font-size: 1.5rem;
+    }
+
+    #board {
+        width: 50%;
+        height: 50%;
+    }
+
+    #board td {
+        -webkit-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
+        box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
+    }
+
+    @-webkit-keyframes fall {
+        0% {
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes fall {
+        0% {
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+}
+
+@media (min-width: 851px) and (max-width: 1050px) {
+    #header {
+        margin-top: 30%;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    button {
+        width: 140px;
+        font-size: 1.5rem;
+    }
+
+    #board {
+        width: 500px;
+        height: 500px;
+    }
+
+    #board td {
+        -webkit-box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.575);
+        box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.575);
+    }
+
+    @-webkit-keyframes fall {
+        0% {
+            -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes fall {
+        0% {
+            -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+}
