@@ -174,8 +174,8 @@ button {
     }
 
     #board td {
-        -webkit-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
-        box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
+        -webkit-box-shadow: inset 0px 0px 0px 3.5px rgba(0, 0, 0, 0.575);
+        box-shadow: inset 0px 0px 0px 3.5px rgba(0, 0, 0, 0.575);
     }
 
     @-webkit-keyframes fall {
