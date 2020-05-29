@@ -70,7 +70,10 @@ const makeHtmlBoard = () => {
         row.classList.add('gameRows');
         for (let x = 0; x < WIDTH; x++) {
             const cell = document.createElement('td');
+            const overlay = document.createElement('div');
             cell.setAttribute('id', `${y}-${x}`);
+            overlay.classList.add('overlay');
+            cell.append(overlay);
             row.append(cell);
         }
         htmlBoard.append(row);
@@ -90,6 +93,7 @@ const findSpotForCol = (x) => {
 // placeInTable: update DOM to place piece into HTML table of board
 const placeInTable = (y, x) => {
     const selectedCell = document.getElementById(`${y}-${x}`);
+    const selectedCellChild = selectedCell.children[0];
     const piece = document.createElement('div');
     piece.classList.add('piece');
     if (currPlayer === 1) {
@@ -97,7 +101,7 @@ const placeInTable = (y, x) => {
     } else {
         piece.classList.toggle('p2');
     }
-    selectedCell.append(piece);
+    selectedCellChild.append(piece);
 };
 
 // endGame: announce game end

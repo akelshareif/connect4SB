@@ -90,14 +90,16 @@ button {
     width: 50px;
     height: 50px;
     position: relative;
-    -webkit-box-shadow: inset 0px 0px 0px 6px rgba(0, 0, 0, 0.575);
-    box-shadow: inset 0px 0px 0px 6px rgba(0, 0, 0, 0.575);
-    border-radius: 50%;
+    z-index: 1;
 }
 
-.gameRows {
+.overlay {
     position: relative;
-    z-index: 1;
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+    border: 5px solid black;
+    border-radius: 50%;
 }
 
 .piece {
@@ -173,9 +175,8 @@ button {
         height: 95%;
     }
 
-    #board td {
-        -webkit-box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.575);
-        box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.575);
+    .overlay {
+        border: 2px solid black;
     }
 
     @-webkit-keyframes fall {
@@ -224,9 +225,8 @@ button {
         height: 50%;
     }
 
-    #board td {
-        -webkit-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
-        box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.575);
+    .overlay {
+        border: 2px solid black;
     }
 
     @-webkit-keyframes fall {
@@ -271,9 +271,8 @@ button {
         height: 500px;
     }
 
-    #board td {
-        -webkit-box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.575);
-        box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.575);
+    .overlay {
+        border: 3px solid black;
     }
 
     @-webkit-keyframes fall {
